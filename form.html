@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diiwaangelinta Dhulka</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0; /* Background nadiif ah */            
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .containerform {
+            background-color: #ffffff;
+            padding: 20px; /* Kordhin padding */
+            border-radius: 10px; /* Geesaha */
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); /* Hooska */
+            width: 90%; /* Ballaca foomka */
+            max-width: 600px; /* Kordhi ballaca ugu badan */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px; /* Yaraynta margin */
+            color: #4a4a4a;
+            font-size: 20px; /* Yaraynta font-size */
+            font-weight: 700;
+        }
+
+        label {
+            display: block;
+            margin-top: 5px; /* Yaraynta margin */
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], input[type="date"], select, textarea {
+            width: calc(100% - 16px);
+            padding: 8px; /* Yaraynta padding */
+            margin-top: 4px; /* Yaraynta margin */
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 13px; /* Yaraynta font-size */
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="date"]:focus, textarea:focus {
+            border-color: #2575fc; /* Midabka focus */
+            outline: none;
+        }
+
+        .input-success {
+            position: relative;
+        }
+
+        .input-success::after {
+            content: '✓'; /* Tick character */
+            color: green;
+            position: absolute;
+            right: 10px; /* Xagasha midig */
+            top: 50%; /* Bartamaha */
+            transform: translateY(-50%); /* Si loo qaabeeyo */
+            font-size: 16px; /* Cabirka font */
+        }
+
+        button {
+            width: 100%;
+            padding: 8px; /* Yaraynta padding */
+            background-color: #2575fc; /* Midabka button */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px; /* Yaraynta font-size */
+            margin-top: 8px; /* Yaraynta margin */
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #6a11cb; /* Midabka hover */
+        }
+
+        .success {
+            display: none;
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 12px; /* Yaraynta font-size */
+        }
+
+        .error {
+            color: red;
+            margin-top: 5px;
+            font-size: 12px; /* Yaraynta font-size */
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <label class="logo"></label>
+        <button class="toggle">☰</button> <!-- Hamburger icon -->
+    </nav>
+    <div class="menu_bar">
+        <ul>
+            <a href="" class="imglog"><img src="log.png" alt="" width="140px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="index.html">HOME </a></li>
+            <li><a href="index.html">LANDS REGISTRATION</span></a></li>
+            <li><a href="#">Registration</a></li>
+            <li><a href="">ABOUT <span>US</span></a></li>
+        </ul>
+    </div>
+
+<div class="containerform">
+    <h1>Diiwaangelinta Dhulka</h1>
+    <div class="row">
+    <form id="registrationForm">
+        <label for="name">Magacaaga / Your Name / الاسم</label>
+        <input type="text" id="name">
+        <div class="error" id="nameError"></div>
+
+        <label for="email">Emailkaaga / Your Email / بريدك الإلكتروني</label>
+        <input type="email" id="email">
+        <div class="error" id="emailError"></div>
+    </d>
+
+        <label for="landSize">Cabbirka Dhulka (hectares) / Land Size (hectares) / حجم الأرض (هكتار)</label>
+        <input type="number" id="landSize">
+        <div class="error" id="landSizeError"></div>
+
+        <label for="landType">Nooca Dhulka / Type of Land / نوع الأرض</label>
+        <select id="landType">
+            <option value="">Xulo Nooca Dhulka / Select Land Type / اختر نوع الأرض</option>
+            <option value="agricultural">Dhul Beer / Agricultural Land / أرض زراعية</option>
+            <option value="residential">Dhul Degenaansho / Residential Land / أرض سكنية</option>
+            <option value="commercial">Dhul Ganacsi / Commercial Land / أرض تجارية</option>
+            <option value="industrial">Dhul Warshad / Industrial Land / أرض صناعية</option>
+        </select>
+        <div class="error" id="landTypeError"></div>
+
+        <label for="establishmentDate">Waqtiga La Aasay / Date Established / تاريخ التأسيس</label>
+        <input type="date" id="establishmentDate">
+        <div class="error" id="establishmentDateError"></div>
+
+        <label for="address">Cinwaankaaga / Your Address / عنوانك</label>
+        <input type="text" id="address">
+        <div class="error" id="addressError"></div>
+
+        <label for="comments">Faallooyinkaaga / Your Comments / تعليقاتك</label>
+        <textarea id="comments" rows="4" placeholder="Halkan ku qor faallooyinkaaga... / Enter your comments here..."></textarea>
+        <div class="error" id="commentsError"></div>
+
+        <label for="region">Xulo Gobolka / Select Region / اختر المنطقة</label>
+        <select id="region">
+            <option value="">Xulo Gobolka / Select Region / اختر المنطقة</option>
+            <option value="region1">Gobolka 1 / Region 1 / المنطقة 1</option>
+            <option value="region2">Gobolka 2 / Region 2 / المنطقة 2</option>
+            <option value="region3">Gobolka 3 / Region 3 / المنطقة 3</option>
+        </select>
+        <div class="error" id="regionError"></div>
+
+        <label for="registrationDate">Taariikhda Diiwaangelinta / Date of Registration / تاريخ التسجيل</label>
+        <input type="date" id="registrationDate">
+        <div class="error" id="registrationDateError"></div>
+
+        <label>
+            <input type="checkbox" id="terms">
+            Waxaan aqbalayaa shuruudaha / I accept the terms / أوافق على الشروط.
+        </label>
+        <div class="error" id="termsError"></div>
+
+        <button type="submit">Diiwaangeli / Register / تسجيل</button>
+    </form>
+    <div class="success" id="successMessage">Diiwaangelintaada waa la dhammeeyey! / Your registration is complete! / تم إكمال تسجيلك!</div>
+</div>
+
+<script>
+    document.querySelectorAll('input, select, textarea').forEach(input => {
+        input.addEventListener('input', function() {
+            if (this.value) {
+                this.classList.add('input-success'); // Ku dar fasalka
+            } else {
+                this.classList.remove('input-success'); // Ka saar fasalka
+            }
+        });
+    });
+
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let hasError = false;
+
+        // Clear previous error messages
+        document.querySelectorAll('.error').forEach(error => {
+            error.textContent = '';
+        });
+
+        // Validation
+        const nameValue = document.getElementById('name').value.trim();
+        const emailValue = document.getElementById('email').value.trim();
+        const landSizeValue = document.getElementById('landSize').value.trim();
+        const landTypeValue = document.getElementById('landType').value;
+        const establishmentDateValue = document.getElementById('establishmentDate').value;
+        const addressValue = document.getElementById('address').value.trim();
+        const commentsValue = document.getElementById('comments').value.trim();
+        const regionValue = document.getElementById('region').value;
+        const registrationDateValue = document.getElementById('registrationDate').value;
+
+        // Check name (letters and spaces only)
+        if (!/^[a-zA-Z\s]+$/.test(nameValue)) {
+            document.getElementById('nameError').textContent = 'Magacaaga waa inuu ka kooban yahay xarfo iyo meel / Your name must contain letters and spaces only';
+            hasError = true;
+        }
+
+        // Check email format
+        if (!/\S+@\S+\.\S+/.test(emailValue)) {
+            document.getElementById('emailError').textContent = 'Fadlan geli email sax ah / Please enter a valid email';
+            hasError = true;
+        }
+
+        // Check land size (must be a number and positive)
+        if (!/^\d+(\.\d+)?$/.test(landSizeValue) || landSizeValue <= 0) {
+            document.getElementById('landSizeError').textContent = 'Cabbirka dhulka waa inuu noqdaa tiro togan / Land size must be a positive number';
+            hasError = true;
+        }
+
+        // Check land type
+        if (!landTypeValue) {
+            document.getElementById('landTypeError').textContent = 'Fadlan xulo nooca dhulka / Please select the type of land';
+            hasError = true;
+        }
+
+        // Check establishment date
+        if (!establishmentDateValue) {
+            document.getElementById('establishmentDateError').textContent = 'Fadlan geli waqtiga la aasay / Please enter the date established';
+            hasError = true;
+        }
+
+        // Check address
+        if (!addressValue) {
+            document.getElementById('addressError').textContent = 'Cinwaanka waa lagama maarmaan / Address is required';
+            hasError = true;
+        }
+
+        // Check comments
+        if (!commentsValue) {
+            document.getElementById('commentsError').textContent = 'Fadlan geli faallooyinkaaga / Please enter your comments';
+            hasError = true;
+        }
+
+        // Check region
+        if (!regionValue) {
+            document.getElementById('regionError').textContent = 'Gobolka waa lagama maarmaan / Region is required';
+            hasError = true;
+        }
+
+        // Check registration date (must be in the past or today)
+        if (!registrationDateValue) {
+            document.getElementById('registrationDateError').textContent = 'Fadlan geli taariikhda diiwaangelinta / Please enter the registration date';
+            hasError = true;
+        } else {
+            const registrationDate = new Date(registrationDateValue);
+            const today = new Date();
+            if (registrationDate > today) {
+                document.getElementById('registrationDateError').textContent = 'Taariikhda ayaa ka badnaan karta maanta / Date cannot be in the future';
+                hasError = true;
+            }
+        }
+
+        // Check terms
+        if (!document.getElementById('terms').checked) {
+            document.getElementById('termsError').textContent = 'Fadlan aqbal shuruudaha / Please accept the terms';
+            hasError = true;
+        }
+
+        if (!hasError) {
+            document.getElementById('successMessage').style.display = 'block';
+            document.querySelector('.containerform').style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                document.querySelector('.containerform').style.transform = 'scale(1)';
+            }, 300);
+            this.reset();
+            // Ka saar fasalka guusha
+            document.querySelectorAll('input, select, textarea').forEach(input => {
+                input.classList.remove('input-success');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

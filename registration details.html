@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xogta Dhulka Bis Ku Jira Xamar Weyne</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+        
+            background-color: #f4f4f4;
+        }
+        .containerreg {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h2{
+    color: #333;
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #007BFF;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.more-info {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+/*footer*/
+footer {
+   
+   color: white;
+   padding: 40px 20px;
+   text-align: center;
+   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../images/youngadultservices.jpg);
+}
+footer h3 {
+   margin: 0;
+   font-size: 24px;
+}
+footer p {
+   margin: 5px 0;
+   font-size: 14px;
+}
+.social-links {
+   margin: 20px 0;
+}
+.social-links a {
+   color: white;
+   text-decoration: none;
+   margin: 0 15px;
+   font-size: 18px;
+   transition: transform 0.3s;
+}
+.social-links a:hover {
+   transform: scale(1.2); /* Scale effect on hover */
+}
+.footer-info {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-top: 20px;
+}
+.footer-info div {
+   flex: 1;
+   min-width: 150px;
+   margin: 10px;
+}
+@media (max-width: 600px) {
+   footer {
+       padding: 20px;
+   }
+   .footer-info {
+       flex-direction: column;
+       align-items: center;
+   }
+}
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <label class="logo"></label>
+        <button class="toggle">☰</button> <!-- Hamburger icon -->
+    </nav>
+    <div class="menu_bar">
+        <ul>
+            <a href="" class="imglog"><img src="log.png" alt="" width="140px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="index.html">HOME </a></li>
+            <li><a href="index.html">LANDS REGISTRATION</span></a></li>
+            <li><a href="form.html">Registration</a></li>
+            <li><a href="About us.html">ABOUT <span>US</span></a></li>
+        </ul>
+    </div><hr><br>
+    <div class="containerreg">
+        <h2 >Xogta Dhulka Bis Ku Jira Xamar Weyne</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Bedka (Hector)</th>
+                    <th>Cabirka (m²)</th>
+                    <th>Address</th>
+                    <th>Waqtiga la Aasay</th>
+                    <th>Waqtiga la Diwangaliyay</th>
+                    <th>Location</th>
+                    <th>Nooca Dhulka</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>10,000</td>
+                    <td>Street 1, Xamar Weyne</td>
+                    <td>1990</td>
+                    <td>2020-01-10</td>
+                    <td>Coordinates: 2.0459° N, 45.3427° E</td>
+                    <td>2-Boos</td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <button onclick="toggleMoreInfo()">
+            Read More
+        </button>
+
+        <div id="more-info" class="more-info">
+            <h2>Macluumaad Dheeri ah</h2>
+            <section>Bedka dhulka waxaa lagu cabbiraa hector (ha) ama mitir laba jibbaaran (m²). Halkan waxaa ku yaal cabbirro caadi ah: <br>
+
+                1. 1 Hector = 10,000 mitir laba jibbaaran (m²) <br>
+                2. 1 Acre = 4,046.86 mitir laba jibbaaran (m²) = qiyaastii 0.4047 hector <br>
+                3. 1 Mitir laba jibbaaran* = 0.0001 hector <br>
+                
+                Tusaalooyinka: <br>
+                
+                - Boos: Haddii boosku leeyahay bed 0.5 hector, waxay u dhigantaa 5,000 m². <br>
+                - Nus Boos: Haddii nus boosku leeyahay bed 0.25 hector, waxay u dhigantaa 2,500 m²..</section>
+        </div>
+    </div>
+
+    <script>
+        function toggleMoreInfo() {
+            var moreInfo = document.getElementById("more-info");
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block";
+            } else {
+                moreInfo.style.display = "none";
+            }
+        }
+    </script>
+        <button onclick="goBack()">
+            <i class="fa-solid fa-arrow-left"></i> 
+        </button>
+    
+        <script>
+            function goBack() {
+                window.location.href = "index.html"; 
+            }
+        </script>
+        <footer>
+            <h3>Somali Land Registry</h3>
+            <p>Providing essential land registry services to Somali citizens.</p>
+            <div class="social-links">
+                <a href="#" onclick="showAlert('Facebook')">Facebook</a>
+                <a href="#" onclick="showAlert('Twitter')">Twitter</a>
+                <a href="#" onclick="showAlert('Instagram')">Instagram</a>
+                <a href="#" onclick="showAlert('LinkedIn')">LinkedIn</a>
+            </div>
+            <div class="footer-info">
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>Email: info@landregistry.so</p>
+                    <p>Phone: +252 123 4567</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <p><a href="index.html" style="color:white;">Home</a></p>
+                    <p><a href="#LANDS REGISTRATION" style="color:white;">LANDS REGISTRATION</a></p>
+                    p><a href="#LREGISTRATION" style="color:white;"> REGISTRATION</a></p>
+                    <p><a href="About us .html" style="color:white;">About Us</a></p>
+                </div>
+            </div>
+            <p>&copy; 2025 Somali Land Registry. All rights reserved.</p>
+        </footer>
+</body>
+</html>
